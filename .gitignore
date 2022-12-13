@@ -11,8 +11,13 @@
 # production
 /build
 
-# IDE
+# local
 .vscode/
+private/
+
+# generation
+src/api/routes.ts
+src/api/spec.ts
 
 # misc
 .DS_Store

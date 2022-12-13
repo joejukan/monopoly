@@ -3,5 +3,5 @@ export interface Player {
   firstName: string;
   lastName: string;
   money: number;
-  picture?: string;
+  avatar?: string;
 }
