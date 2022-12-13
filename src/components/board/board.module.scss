@@ -1,0 +1,75 @@
+@import 'src/styles/variables.scss';
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $space-large;
+  font-size: 13px;
+  background-color: transparent;
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background-color: #d6f5d6;
+  }
+
+  & .top,
+  & .bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  & .bottom {
+    flex-direction: row-reverse;
+  }
+
+  & .left,
+  & .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .left {
+    flex-direction: column-reverse;
+  }
+
+  & .center {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    & .dice {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 400px;
+      & div.roll {
+        display: flex;
+        flex-direction: column;
+        & :global(span.text) {
+          margin-bottom: $space-small;
+        }
+      }
+    }
+  }
+
+  & .middle {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}

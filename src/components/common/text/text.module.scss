@@ -1,0 +1,17 @@
+@import 'src/styles/variables.scss';
+
+.text {
+  color: $primary;
+  &.bold {
+    font-weight: $font-weight-bold;
+  }
+  &.small {
+    font-size: $font-size-small;
+  }
+  &.medium {
+    font-size: $font-size-medium;
+  }
+  &.large {
+    font-size: $font-size-large;
+  }
+}

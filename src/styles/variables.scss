@@ -1,0 +1,19 @@
+$font-size-small: 8px;
+$font-size-medium: 16px;
+$font-size-large: 24px;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$space-xsmall: 4px;
+$space-small: 8px;
+$space-medium: 12px;
+$space-large: 16px;
+$space-xlarge: 20px;
+
+$place-padding: $space-small;
+$place-width: calc(120px - 2 * $place-padding);
+$place-height: calc(190px - 2 * $place-padding);
+
+$primary: #1f7a1f;
+$secondary: #adebad;

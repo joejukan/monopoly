@@ -1,0 +1,58 @@
+@import 'src/styles/variables.scss';
+
+.place {
+  display: flex;
+  border: 1px solid black;
+  overflow: hidden;
+  position: relative;
+
+  & :global(span) {
+    text-overflow: wrap;
+  }
+
+  & .container {
+    padding: $place-padding;
+    max-width: $place-width;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.top,
+  &.bottom {
+    min-width: $place-width;
+    max-width: $place-width;
+    min-height: $place-height;
+    max-height: $place-height;
+    align-items: center;
+  }
+
+  &.top {
+    flex-direction: column-reverse;
+  }
+  &.bottom {
+    flex-direction: column;
+  }
+
+  &.left,
+  &.right {
+    flex-direction: row;
+    max-width: $place-height;
+    min-width: $place-height;
+    min-height: $place-width;
+    max-height: $place-width;
+  }
+
+  &.left {
+    flex-direction: row-reverse;
+  }
+
+  &.wide {
+    min-width: $place-height;
+  }
+
+  & .bold {
+    font-weight: $font-weight-bold;
+  }
+}

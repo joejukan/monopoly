@@ -1,0 +1,11 @@
+{
+  "exec": "node --loader ts-node/esm src/api/server.ts",
+  "ignore": [
+    "routes.ts",
+    "spec.ts"
+  ],
+  "watch": [
+    "src/api"
+  ],
+  "ext": "ts"
+}

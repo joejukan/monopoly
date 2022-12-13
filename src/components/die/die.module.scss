@@ -1,0 +1,19 @@
+$offset: 3px;
+
+.die {
+  position: relative;
+  & .icon {
+    z-index: 3;
+    position: relative;
+  }
+  & div.background {
+    background-color: black;
+    position: absolute;
+    border-radius: calc(5 * $offset);
+    z-index: 1;
+    top: $offset;
+    left: calc(-1 * $offset);
+    width: calc(100% + 2 * $offset);
+    height: calc(100% - 2 * $offset);
+  }
+}
