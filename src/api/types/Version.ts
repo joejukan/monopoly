@@ -4,5 +4,6 @@ export interface Update {
   error?: string;
   name: string;
   revision: string;
-  action?: (db: Database) => Promise<void>;
+  install?: (db: Database) => Promise<void>;
+  uninstall?: (db: Database) => Promise<void>;
 }

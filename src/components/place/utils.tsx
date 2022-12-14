@@ -5,13 +5,13 @@ import { getPlaceTransform, getOrientation, capitalize, getCurrency, getValue } 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiamond, faFaucet, faLightbulb, faQuestion } from '@fortawesome/free-solid-svg-icons';
 
-import chestSrc from 'images/chest.png';
-import goSrc from 'images/go.png';
-import jailSrc from 'images/jail.png';
-import luxurySrc from 'images/luxury.png';
-import parkingSrc from 'images/parking.png';
-import policeSrc from 'images/police.png';
-import trainSrc from 'images/train.png';
+import chestSrc from 'images/places/chest.png';
+import goSrc from 'images/places/go.png';
+import jailSrc from 'images/places/jail.png';
+import luxurySrc from 'images/places/luxury.png';
+import parkingSrc from 'images/places/parking.png';
+import policeSrc from 'images/places/police.png';
+import trainSrc from 'images/places/train.png';
 
 import styles from './place.module.scss';
 

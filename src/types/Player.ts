@@ -2,6 +2,6 @@ export interface Player {
   color: string;
   firstName: string;
   lastName: string;
-  money: number;
+  amount: number;
   avatar?: string;
 }
