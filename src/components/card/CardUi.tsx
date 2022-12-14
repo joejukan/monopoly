@@ -9,8 +9,10 @@ interface Props {
   name?: string;
   type?: Card['type'];
   style?: CSSProperties;
+
+  onClick?: () => void;
 }
-export const CardUi: FC<Props> = ({ name, type, ...props }) => {
+export const CardUi: FC<Props> = ({ name, type, onClick, ...props }) => {
   const src = useMemo(() => {
     const path = chests.has(name) ? `images/${type}s/${name}.webp` : `images/places/${type}.png`;
     return path;
@@ -45,7 +47,8 @@ export const CardUi: FC<Props> = ({ name, type, ...props }) => {
   return (
     <div
       className={cls}
-      style={style}>
+      style={style}
+      onClick={onClick}>
       <div className={contentCls}>
         <img
           src={src}
@@ -63,7 +66,8 @@ CardUi.defaultProps = {
     top: 320,
     left: 550,
     transform: 'rotate(135deg)'
-  }
+  },
+  onClick: () => {}
 };
 
 export default CardUi;

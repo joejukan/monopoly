@@ -1,11 +1,14 @@
 import { BoardUi } from 'components';
+import { MonopolyProvider } from 'contexts/monopoly';
 import styles from './app.module.scss';
 
 function App() {
   return (
-    <div className={styles.app}>
-      <BoardUi />
-    </div>
+    <MonopolyProvider>
+      <div className={styles.app}>
+        <BoardUi />
+      </div>
+    </MonopolyProvider>
   );
 }
 
