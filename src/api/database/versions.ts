@@ -7,7 +7,7 @@ export const versions = (
       revision: '0.0.1',
       install: async (db) => {
         const queries = [
-          `CREATE TABLE games (id INTEGER PRIMARY KEY AUTOINCREMENT, start_time INTEGER DEFAULT unixepoch() NOT NULL, end_time INTEGER DEFAULT unixepoch() NOT NULL);`,
+          `CREATE TABLE games (id INTEGER PRIMARY KEY AUTOINCREMENT, start_time INTEGER DEFAULT unixepoch() NOT NULL, end_time INTEGER NULL);`,
           `CREATE TABLE players (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT NOT NULL, password TEXT NOT NULL, first_name TEXT NOT NULL, last_name TEXT NOT NULL, avatar TEXT NULL);`
         ];
         for (const query of queries) {

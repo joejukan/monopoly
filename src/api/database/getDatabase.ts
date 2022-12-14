@@ -2,7 +2,6 @@ import path from 'path';
 import fsp from 'fs/promises';
 import fs from 'fs';
 import initSqlJs, { Database } from 'sql.js';
-import { updateDatabase } from './updateDatabase';
 const state = {
   db: null as Database
 };
@@ -17,8 +16,6 @@ export async function getDb() {
   const SQL = await initSqlJs();
   const db = new SQL.Database(buffer || []);
   state.db = db;
-
-  updateDatabase(db);
 
   return state.db;
 }
