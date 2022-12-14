@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import clsx from 'clsx';
 import { getBoardUiPlaces } from 'utils';
-import { PlaceUi } from 'components';
+import { CardUi, PlaceUi } from 'components';
 import DiceUi from './BoardDiceUi';
 import styles from './board.module.scss';
 
@@ -9,6 +9,7 @@ export const BoardUi: FC = () => {
   const [dice, setDice] = useState<[number, number]>([1, 1]);
   return (
     <div className={clsx('board', styles.board)}>
+      <CardUi />
       <div className={styles.container}>
         <div className={styles.top}>
           {getBoardUiPlaces('top').map((place) => (

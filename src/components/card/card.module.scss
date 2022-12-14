@@ -1,0 +1,33 @@
+@import 'src/styles/variables.scss';
+
+.card {
+  position: absolute;
+  width: 258px;
+  height: 150px;
+  border: 1px solid black;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  &.none {
+    padding: $space-xlarge;
+    width: calc(258px - $space-xlarge);
+    height: calc(150px - $space-xlarge);
+  }
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    &.none {
+      background-color: #e6e6ff;
+    }
+  }
+}

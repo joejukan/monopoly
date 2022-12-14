@@ -1,3 +1,4 @@
+export * from './Card';
 export * from './Chest';
 export * from './Direction';
 export * from './Entity';
