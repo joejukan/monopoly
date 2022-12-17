@@ -14,16 +14,19 @@ export const BoardDiceUi: FC<Props> = ({ dice, onRoll }) => {
   const [rolling, setRolling] = useState(false);
   const handleRoll = useCallback(async () => {
     setRolling(true);
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 3; i++) {
       onRoll([rollDice(), rollDice()], true);
-      await wait(50);
+      await wait(300);
     }
     setRolling(false);
     onRoll([rollDice(), rollDice()], false);
   }, [onRoll]);
   return (
     <div className={styles.dice}>
-      <DieUi value={dice[0]} />
+      <DieUi
+        value={dice[0]}
+        spin={rolling}
+      />
       <div className={styles.roll}>
         <Text
           bold
@@ -33,11 +36,15 @@ export const BoardDiceUi: FC<Props> = ({ dice, onRoll }) => {
         <Button
           bold
           disabled={rolling}
-          onClick={handleRoll}>
+          onClick={handleRoll}
+          style={{ opacity: rolling ? 0.5 : 1 }}>
           ROLL
         </Button>
       </div>
-      <DieUi value={dice[1]} />
+      <DieUi
+        value={dice[1]}
+        spin={rolling}
+      />
     </div>
   );
 };

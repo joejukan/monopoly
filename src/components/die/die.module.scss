@@ -2,6 +2,10 @@ $offset: 3px;
 
 .die {
   position: relative;
+  transition: all 0.25s ease-in-out;
+  &.spin {
+    animation: rotation 1s infinite ease;
+  }
   & .icon {
     z-index: 3;
     position: relative;
@@ -15,5 +19,14 @@ $offset: 3px;
     left: calc(-1 * $offset);
     width: calc(100% + 2 * $offset);
     height: calc(100% - 2 * $offset);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }

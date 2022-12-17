@@ -1,4 +1,5 @@
 import { FC, useMemo } from 'react';
+import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faDiceOne,
@@ -11,10 +12,11 @@ import {
 import styles from './die.module.scss';
 
 interface Props {
+  spin?: boolean;
   value?: number;
 }
 
-export const DieUi: FC<Props> = ({ value }) => {
+export const DieUi: FC<Props> = ({ value, spin }) => {
   const icon = useMemo(() => {
     switch (value) {
       case 1:
@@ -32,7 +34,7 @@ export const DieUi: FC<Props> = ({ value }) => {
     }
   }, [value]);
   return (
-    <div className={styles.die}>
+    <div className={clsx(styles.die, { [styles.spin]: spin })}>
       <FontAwesomeIcon
         inverse
         className={styles.icon}
@@ -44,6 +46,6 @@ export const DieUi: FC<Props> = ({ value }) => {
   );
 };
 
-DieUi.defaultProps = { value: 1 };
+DieUi.defaultProps = { value: 1, spin: false };
 
 export default DieUi;

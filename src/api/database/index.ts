@@ -1,4 +1,5 @@
-export * from './getDatabase';
+export * from './utils';
+export * from './prepareQuery';
 export * from './updateDatabase';
 export * from './versions';
 
