@@ -9,9 +9,3 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
-@font-face {
-  font-family: 'Monda';
-  src: url('./images/fonts/Monda/Monda-Bold.ttf') format('truetype'),
-    url('./images/fonts/Monda/Monda-Regular.ttf') format('truetype');
-}
