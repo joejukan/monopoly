@@ -11,7 +11,7 @@ const api: ExpressApi = express();
 api.use('/', router);
 
 const imagesPath = path.join(process.cwd(), 'src', 'images');
-api.use('/api/images', express.static(imagesPath));
+//api.use('/api/images', express.static(imagesPath));
 
 export { api };
 export default api;

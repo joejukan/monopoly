@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link
           rel='shortcut icon'
-          href='/api/images/public/favlogo.png'
+          href='/images/favlogo.png'
         />
       </Head>
       <body>

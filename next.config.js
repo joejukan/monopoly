@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    allowMiddlewareResponseBody: true
+    allowMiddlewareResponseBody: true,
+    middlewarePrefetch: 'flexible'
   }
 }
 
