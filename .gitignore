@@ -15,9 +15,12 @@
 .vscode/
 private/
 
-# generation
+# tsoa
 src/api/routes.ts
 src/api/spec.ts
+
+# next
+.next
 
 # misc
 .DS_Store
